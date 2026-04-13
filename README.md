@@ -12,7 +12,7 @@
 <p align="center">
   A modern RESTful API for managing to-do tasks built with Express.js and SQLite.
   <br>
-  <strong><a href="https://github.com/blaxkmiradev">@blaxkmiradev</a></strong> · Made by <strong><a href="https://github.com/Rikixz">Rikixz</a></strong>
+  <strong><a href="https://github.com/blaxkmiradev">@blaxkmiradev</a></strong> · Made by <strong><a href="https://github.com/blaxkmiradev">Rikixz</a></strong>
 </p>
 
 ---
