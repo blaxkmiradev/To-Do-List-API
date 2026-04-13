@@ -33,7 +33,7 @@
 ```bash
 # Clone the repository
 git clone https://github.com/blaxkmiradev/To-Do-List-API.git
-cd To-DoListAPI
+cd To-Do-List-API
 
 # Install dependencies
 npm install
@@ -112,7 +112,7 @@ curl -X PATCH http://localhost:3000/api/todos/1/toggle
 ## Project Structure
 
 ```
-To-DoListAPI/
+To-Do-List-API/
 ├── .env                    # Environment configuration
 ├── package.json            # Dependencies
 ├── README.md               # This file
