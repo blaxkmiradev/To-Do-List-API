@@ -32,8 +32,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/blaxkmiradev/To-DoListAPI.git
-cd To-DoListAPI
+git clone https://github.com/blaxkmiradev/To-Do-List-API.git
+cd To-Do-List-API
 
 # Install dependencies
 npm install
@@ -227,12 +227,12 @@ DB_PATH=./database.sqlite
 
 ## License
 
-MIT License · Copyright (c) 2024 [blaxkmiradev](https://github.com/blaxkmiradev)
+MIT License · Copyright (c) 2026 [blaxkmiradev](https://github.com/blaxkmiradev)
 
 ---
 
 <p align="center">
-  <sub>Built with ❤️ by <a href="https://github.com/blaxkmiradev">@blaxkmiradev</a> and <a href="https://github.com/Rikixz">Rikixz</a></sub>
+  <sub>Built with ❤️ by <a href="https://github.com/blaxkmiradev">@blaxkmiradev</a> and <a href="https://github.com/blaxkmiradev">Rikixz</a></sub>
 </p>
 
 <!-- markdownlint-enable MD013 -->
