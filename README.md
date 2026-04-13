@@ -32,7 +32,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/blaxkmiradev/To-DoListAPI.git
+git clone https://github.com/blaxkmiradev/To-Do-List-API.git
 cd To-DoListAPI
 
 # Install dependencies
@@ -155,7 +155,7 @@ DB_PATH=./database.sqlite
 
 ## License
 
-MIT License · Copyright (c) 2024 [blaxkmiradev](https://github.com/blaxkmiradev)
+MIT License · Copyright (c) 2026 [blaxkmiradev](https://github.com/blaxkmiradev)
 
 ---
 
