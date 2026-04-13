@@ -12,7 +12,7 @@
 <p align="center">
   A modern RESTful API for managing to-do tasks built with Express.js and SQLite.
   <br>
-  <strong><a href="https://github.com/blaxkmiradev">@blaxkmiradev</a></strong> · Made by <strong><a href="https://github.com/blaxkmiradev">Rikixz</a></strong>
+  <strong><a href="https://github.com/blaxkmiradev">@blaxkmiradev</a></strong> · Made by <strong><a href="https://github.com/Rikixz">Rikixz</a></strong>
 </p>
 
 ---
@@ -32,8 +32,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/blaxkmiradev/To-Do-List-API.git
-cd To-Do-List-API
+git clone https://github.com/blaxkmiradev/To-DoListAPI.git
+cd To-DoListAPI
 
 # Install dependencies
 npm install
@@ -112,7 +112,7 @@ curl -X PATCH http://localhost:3000/api/todos/1/toggle
 ## Project Structure
 
 ```
-To-Do-List-API/
+To-DoListAPI/
 ├── .env                    # Environment configuration
 ├── package.json            # Dependencies
 ├── README.md               # This file
@@ -128,6 +128,78 @@ To-Do-List-API/
     └── routes/
         └── todoRoutes.js
 ```
+
+---
+
+## Architecture Diagram
+
+![Architecture Diagram](diagram.png)
+
+```mermaid
+graph TB
+    subgraph Client
+        Browser[Browser]
+        API[API Client/cURL]
+    end
+
+    subgraph "To-Do List API"
+        Server[Express Server<br/>port 3000]
+        
+        subgraph "Routes"
+            R1["GET /api/todos"]
+            R2["POST /api/todos"]
+            R3["GET /api/todos/:id"]
+            R4["PUT /api/todos/:id"]
+            R5["DELETE /api/todos/:id"]
+            R6["PATCH /api/todos/:id/toggle"]
+        end
+        
+        subgraph "Controller"
+            C[todoController.js]
+        end
+        
+        subgraph "Model"
+            M[todo.js]
+        end
+        
+        subgraph "Database"
+            DB[(SQLite<br/>database.sqlite)]
+        end
+    end
+
+    Browser -->|"GET /"| Server
+    Browser -->|"GET /docs"| Server
+    API -->|"REST API"| Server
+    Server --> R1
+    Server --> R2
+    Server --> R3
+    Server --> R4
+    Server --> R5
+    Server --> R6
+    
+    R1 --> C
+    R2 --> C
+    R3 --> C
+    R4 --> C
+    R5 --> C
+    R6 --> C
+    
+    C --> M
+    M --> DB
+    
+    Server -->|"HTML/CSS/JS"| Browser
+```
+
+---
+
+## How It Works
+
+1. **Client Layer**: Users interact via browser (frontend) or API clients (curl, Postman, etc.)
+2. **Server Layer**: Express.js handles HTTP requests and routes them to appropriate handlers
+3. **Routes**: Direct incoming requests to controller methods based on HTTP method and URL
+4. **Controller**: Contains business logic, processes requests, and returns responses
+5. **Model**: Handles database operations (CRUD) with SQLite
+6. **Database**: SQLite stores all todo data persistently
 
 ---
 
@@ -155,7 +227,7 @@ DB_PATH=./database.sqlite
 
 ## License
 
-MIT License · Copyright (c) 2026 [blaxkmiradev](https://github.com/blaxkmiradev)
+MIT License · Copyright (c) 2024 [blaxkmiradev](https://github.com/blaxkmiradev)
 
 ---
 
